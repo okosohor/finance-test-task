@@ -57,7 +57,10 @@ function trackTickers(socket) {
 }
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://finance-test-task-92ql.vercel.app',
+  methods: 'GET',
+}));
 const server = http.createServer(app);
 
 const socketServer = io(server, {
