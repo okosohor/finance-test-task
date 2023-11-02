@@ -27,6 +27,7 @@ function utcDate() {
 }
 
 function getQuotes(socket) {
+  console.log(`Server is running on port ${PORT}`);
 
   const quotes = tickers.map(ticker => ({
     ticker,
