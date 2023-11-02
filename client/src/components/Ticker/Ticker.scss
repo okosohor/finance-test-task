@@ -1,0 +1,82 @@
+.ticker {
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 15px 25px;
+  margin-bottom: 25px;
+  background: rgb(246,246,246);
+  background: linear-gradient(264deg, rgba(246,246,246,1) 0%, rgba(155,251,255,1) 100%);
+  
+  box-shadow: 4px 8px 8px 5px rgba(124,124,124,0.57);
+-webkit-box-shadow: 4px 8px 8px 5px rgba(124,124,124,0.57);
+-moz-box-shadow: 4px 8px 8px 5px rgba(124,124,124,0.57);
+
+  &__img {
+    height: 17px;
+    width: 17px;
+    display: inline-block;
+    fill: #098200;
+
+    &--hiden {
+      display: none;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    &-text {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 22px;
+      min-width: 130px;
+      text-align: left;
+
+      &--red {
+        color: #fe3434;
+      }
+
+      &--green{
+        color: #098200;
+      }
+    }
+
+  }
+
+  &__body {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+
+    &-container {
+      
+    }
+
+    &-text {
+      font-weight: 500;
+      font-size: 18px;
+      margin-bottom: 5px;
+      min-width: 130px;
+      text-align: left;
+
+      &--red {
+        color: #fe3434;
+      }
+
+      &--green{
+        color: #098200;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    &-text {
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+
+}
+
