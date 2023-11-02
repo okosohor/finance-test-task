@@ -16,7 +16,7 @@ interface TickerData {
   last_trade_time: string;
 }
 
-const socket: Socket = io('http://localhost:4000');
+const socket: Socket = io('https://finance-test-task-server.vercel.app');
 // const ws = new WebSocket('http://localhost:4000');
 
 export const TickerList: React.FC = () => {
