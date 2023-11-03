@@ -4,6 +4,7 @@ import './TickerList.scss';
 import { io, Socket } from 'socket.io-client';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { setTicker } from '../../store/slices/tickersSlice';
+import { setVisibleTickers } from '../../store/slices/visibleTickersSlice';
 
 interface TickerData {
   ticker: string;
@@ -16,7 +17,8 @@ interface TickerData {
   last_trade_time: string;
 }
 
-const socket: Socket = io('https://finance-test-task-server.vercel.app');
+// const socket: Socket = io('https://finance-test-task-server.vercel.app');
+const socket: Socket = io('https://finance-server-qsji.onrender.com');
 // const ws = new WebSocket('http://localhost:4000');
 
 export const TickerList: React.FC = () => {
@@ -32,9 +34,11 @@ export const TickerList: React.FC = () => {
 
   useEffect(() => {
     const updateTickers = (newTickers: TickerData[]) => {
-      setTickers(newTickers);
       dispatch(setTicker(newTickers));
+      dispatch(setVisibleTickers(newTickers.map(ticker => ticker.ticker)));
     };
+
+
 
     socket.emit('start');
 
@@ -53,3 +57,6 @@ export const TickerList: React.FC = () => {
     </div>
   );
 };
+
+
+

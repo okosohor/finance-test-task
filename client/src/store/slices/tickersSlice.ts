@@ -20,7 +20,7 @@ const initialState: {tickers: TickerData[]} = {
 };
 
 export const tickersSlice = createSlice({
-  name: 'counter',
+  name: 'tickers',
   initialState,
   reducers: {
     // increment: (state) => {
