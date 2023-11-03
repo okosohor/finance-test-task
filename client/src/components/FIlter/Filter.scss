@@ -3,8 +3,33 @@
 
   margin: 0 auto;
   max-width:  800px;
-  padding: 30px 50px;
+  padding: 30px 100px;
 
   display: flex;
   flex-direction: column;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  &__button {
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background: rgb(198,255,175);
+    background: linear-gradient(151deg, rgba(198,255,175,1) 0%, rgba(102,225,97,1) 47%, rgba(52,197,44,1) 100%);
+    transition: all 0.2s;
+    font-weight: 600;
+    cursor: pointer;
+
+    &--unactive {
+      background: rgb(255,161,47);
+      background: linear-gradient(151deg, rgba(255,161,47,1) 0%, rgba(248,93,38,1) 47%, rgba(179,4,4,1) 100%);
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      color: rgb(86, 86, 86);
+    }
+  }
 };

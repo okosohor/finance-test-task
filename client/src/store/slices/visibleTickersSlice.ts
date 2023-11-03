@@ -35,7 +35,7 @@ export const visibleTickersSlice = createSlice({
     },
 
     removeVisibleTicker: (state, action: PayloadAction<string>) => {
-      state.visibleTickers.filter(name => name !== action.payload);
+      state.visibleTickers = state.visibleTickers.filter(name => name !== action.payload);
     },
   },
 });

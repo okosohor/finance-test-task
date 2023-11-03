@@ -1,0 +1,13 @@
+.loading {
+  margin: 200px auto;
+  padding: 100px 200px;
+  background-color: #d4d4d4;
+  justify-content: center;
+  max-width: 90%;
+  border-radius: 50px;
+  font-size: 30px;
+  
+  &__text {
+    text-align: center;
+  }
+}
