@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import { TickerList } from '../TickerList';
-import { Filter } from '../Filter/index';
-import { useAppSelector } from '../../hooks';
+import { TickerList } from './components/TickerList';
+import { Filter } from './components/Filter/index';
+import { useAppSelector } from './hooks';
 
-export const App = () => {
+function App() {
   const tickers = useAppSelector(state => state.tickers.tickers);
   return (
     <>
@@ -15,4 +15,7 @@ export const App = () => {
     </>
   );
 };
+
+export default App;
+
 
