@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { TickerList } from './components/TickerList';
-import { Filter } from './components/Filter/index';
+// import { Filter } from './components/Filter/';
 import { useAppSelector } from './hooks';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       {/* {tickers.length !== 0 && ( */}
-      <Filter />
+      {/* <Filter /> */}
       {/* // )} */}
       <TickerList />
     </>
