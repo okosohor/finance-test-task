@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
 import cn from 'classnames';
 import './Filter.scss';
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { addVisibleTicker, removeVisibleTicker, setVisibleTickers } from '../../store/slices/visibleTickersSlice';
+import { addVisibleTicker, removeVisibleTicker } from '../../store/slices/visibleTickersSlice';
 
 
 

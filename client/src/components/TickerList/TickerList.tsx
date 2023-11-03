@@ -37,11 +37,10 @@ export const TickerList: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
   useEffect(() => {
-    console.log(visibleTickers);
     if(visibleTickers.length === 0 && !isLoaded) {
       dispatch(setVisibleTickers(tickers.map(tickers => tickers.ticker)));
     }
-  }, [visibleTickers, tickers, dispatch]);
+  }, [visibleTickers, tickers, dispatch, isLoaded]);
 
 
   useEffect(() => {
