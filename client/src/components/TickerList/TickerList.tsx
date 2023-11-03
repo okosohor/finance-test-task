@@ -6,10 +6,11 @@ import { useAppDispatch, useAppSelector } from '../../hooks';
 import { setTicker } from '../../store/slices/tickersSlice';
 import { setVisibleTickers } from '../../store/slices/visibleTickersSlice';
 import { Loading } from '../Loading';
+import { TickersFilter } from '../TickersFilter';
 
-import cn from 'classnames';
-import '../Filter/Filter.scss';
-import { addVisibleTicker, removeVisibleTicker } from '../../store/slices/visibleTickersSlice';
+// import cn from 'classnames';
+// import '../Filter/Filter.scss';
+// import { addVisibleTicker, removeVisibleTicker } from '../../store/slices/visibleTickersSlice';
 
 interface TickerData {
   ticker: string;
@@ -67,7 +68,7 @@ export const TickerList: React.FC = () => {
   return (
     tickers.length !== 0 ? (
       <>
-        <Filter />
+        <TickersFilter />
         <div className="ticker-list">
           {filteredTickers.map(ticker => (
             <Ticker key={ticker.ticker} singleTicker={ticker}/>
@@ -83,36 +84,36 @@ export const TickerList: React.FC = () => {
 
 
 
-export const Filter: React.FC = () => {
-  const tickers = useAppSelector(state => state.tickers.tickers);
-  const visibleTiсkers = useAppSelector(state => state.visibleTickers.visibleTickers);
-  const dispatch = useAppDispatch();
+// export const Filter: React.FC = () => {
+//   const tickers = useAppSelector(state => state.tickers.tickers);
+//   const visibleTiсkers = useAppSelector(state => state.visibleTickers.visibleTickers);
+//   const dispatch = useAppDispatch();
 
-  const handleClick = (ticker: string) => {
-    if(visibleTiсkers.includes(ticker)) {
-      dispatch(removeVisibleTicker(ticker));
-    } else {
-      dispatch(addVisibleTicker(ticker));
-    }
-  };
+//   const handleClick = (ticker: string) => {
+//     if(visibleTiсkers.includes(ticker)) {
+//       dispatch(removeVisibleTicker(ticker));
+//     } else {
+//       dispatch(addVisibleTicker(ticker));
+//     }
+//   };
 
 
-  return (
-    <div className="filter">
-      {tickers.map(ticker => (
-        <button 
-          className={cn('filter__button', {
-            'filter__button--unactive': !visibleTiсkers.includes(ticker.ticker),
-          })}
-          key={ticker.ticker}
-          onClick={() => handleClick(ticker.ticker)}
-        >
-          {ticker.ticker}
-        </button>
-      ))}
-    </div>
-  );
-};
+//   return (
+//     <div className="filter">
+//       {tickers.map(ticker => (
+//         <button 
+//           className={cn('filter__button', {
+//             'filter__button--unactive': !visibleTiсkers.includes(ticker.ticker),
+//           })}
+//           key={ticker.ticker}
+//           onClick={() => handleClick(ticker.ticker)}
+//         >
+//           {ticker.ticker}
+//         </button>
+//       ))}
+//     </div>
+//   );
+// };
 
 
 
