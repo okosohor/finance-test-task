@@ -18,12 +18,6 @@ export const Filter: React.FC = () => {
     }
   };
 
-  // useEffect (() => {
-  //   if(!visibleTikers) {
-  //     dispatch(setVisibleTickers(tickers.map(ticker => ticker.ticker)));
-  //   };
-  // }, [tickers, visibleTikers, dispatch]);
-
 
   return (
     <div className="filter">
