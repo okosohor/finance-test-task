@@ -20,11 +20,11 @@ export const TickersFilter: React.FC = () => {
 
 
   return (
-    <div className="filter">
+    <div className="tickers-filter">
       {tickers.map(ticker => (
         <button 
-          className={cn('filter__button', {
-            'filter__button--unactive': !visibleTiсkers.includes(ticker.ticker),
+          className={cn('tickers-filter__button', {
+            'tickers-filter__button--unactive': !visibleTiсkers.includes(ticker.ticker),
           })}
           key={ticker.ticker}
           onClick={() => handleClick(ticker.ticker)}

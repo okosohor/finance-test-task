@@ -1,9 +1,9 @@
 import './App.css';
-import { Main } from './components/Main';
+import { TickerList } from './components/TickerList';
 
 function App() {
   return (
-    <Main />
+    <TickerList />
   );
 };
 
