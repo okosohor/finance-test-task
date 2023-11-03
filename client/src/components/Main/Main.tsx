@@ -7,9 +7,7 @@ export const Main: React.FC = () => {
   const tickers = useAppSelector(state => state.tickers.tickers);
   return (
     <>
-      {tickers.length !== 0 && (
-        <Filter />
-      )}
+      <Filter />
       <TickerList />
     </>
   );
