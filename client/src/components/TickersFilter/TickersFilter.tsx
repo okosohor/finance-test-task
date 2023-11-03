@@ -17,8 +17,7 @@ export const TickersFilter: React.FC = () => {
       dispatch(addVisibleTicker(ticker));
     }
   };
-
-
+  
   return (
     <div className="tickers-filter">
       {tickers.map(ticker => (
